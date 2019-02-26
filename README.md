@@ -1,6 +1,6 @@
 # Product Parser
 
-This app is a simple product parser able to read product structures of the same format as those found in the example folder, either in JSON, XML, or CSV format, and renders them in a simple table in the browser.
+This app is a simple product parser able to read product structures of the same format as those found in the examples folder, either in JSON, XML, or CSV format, and renders them in a simple table in the browser.
 
 ## Getting Started
 

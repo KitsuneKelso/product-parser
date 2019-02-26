@@ -1,6 +1,8 @@
 {
   "name": "product-parser",
   "version": "0.1.0",
+  "author": "Fredrik Gustafsson <fredrikg1987@gmail.com>",
+  "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "react": "^16.8.3",
@@ -8,6 +10,7 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
+    "dev": "yarn start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

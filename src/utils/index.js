@@ -1,5 +1,6 @@
 export { default as jsonParser } from "./jsonParser";
 export { default as xmlParser } from "./xmlParser";
+export { default as csvParser } from "./csvParser";
 
 const SIZE_ORDER = ["XS", "S", "M", "L", "XL"];
 
@@ -14,3 +15,5 @@ const bySize = (a, b) => {
 };
 
 export const sortBySize = clothes => clothes.sort(bySize);
+
+export const TAG_UNDEFINED = "<undefined>";

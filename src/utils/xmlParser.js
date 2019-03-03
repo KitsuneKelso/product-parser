@@ -1,4 +1,4 @@
-import { sortBySize } from ".";
+import { sortBySize, TAG_UNDEFINED } from ".";
 
 const parseXml = xmlInput => {
   try {
@@ -11,7 +11,7 @@ const parseXml = xmlInput => {
           const element = garment.getElementsByTagName(tag);
           return element.length > 0
             ? element[0].firstChild.nodeValue
-            : "<undefined>";
+            : TAG_UNDEFINED;
         };
         return {
           type: getNodeValue("type"),

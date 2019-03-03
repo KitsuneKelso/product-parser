@@ -1,6 +1,6 @@
 import React from "react";
 
-import { JsonParser } from ".";
+import { JsonParser, XmlParser } from ".";
 import "./App.css";
 
 const App = () => (
@@ -8,6 +8,7 @@ const App = () => (
     <header className="App-header">
       <p>Hello world! Let's parse some files!</p>
       <JsonParser />
+      <XmlParser />
     </header>
   </div>
 );

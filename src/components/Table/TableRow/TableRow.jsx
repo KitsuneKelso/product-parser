@@ -1,14 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cn from "classnames";
 
-const TableRow = ({ col1, col2, col3, col4, classes }) => (
-  <div className={classes.tableRow}>
-    <div className={classes.tableItem}>{col1}</div>
-    <div className={classes.tableItem}>{col2}</div>
-    <div className={classes.tableItem}>{col3}</div>
-    <div className={classes.tableItem}>{col4}</div>
-  </div>
-);
+import { TAG_UNDEFINED } from "../../../utils";
+
+const TableRow = ({ col1, col2, col3, col4, classes }) => {
+  const classNames = val =>
+    cn(classes.tableItem, { [classes.dataMissing]: val === TAG_UNDEFINED });
+  const rowItem = val => <div className={classNames(val)}>{val}</div>;
+  return (
+    <div className={classes.tableRow}>
+      {rowItem(col1)}
+      {rowItem(col2)}
+      {rowItem(col3)}
+      {rowItem(col4)}
+    </div>
+  );
+};
 
 TableRow.propTypes = {
   col1: PropTypes.string.isRequired,

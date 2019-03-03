@@ -1,3 +1,9 @@
-import Table from "./Table";
+import injectSheet from "react-jss";
 
-export default Table;
+import Table from "./Table";
+import style from "./style";
+
+const enhance = injectSheet(style);
+
+export default enhance(Table);
+export { Table as Component, style };

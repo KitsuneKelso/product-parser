@@ -35,10 +35,16 @@ const JsonParser = ({ classes }) => {
     </div>
   );
 
+  const colors = {
+    JSON: "red",
+    XML: "green",
+    CSV: "blue"
+  };
+
   return (
     <div className={classes.root}>
       {buttons}
-      <Table clothes={parsedClothes[format]} />
+      <Table clothes={parsedClothes[format]} color={colors[format]} />
     </div>
   );
 };

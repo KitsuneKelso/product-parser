@@ -1,15 +1,13 @@
 import React from "react";
 
-import { JsonParser, XmlParser, CsvParser } from ".";
+import { ClothesParser } from ".";
 import "./App.css";
 
 const App = () => (
   <div className="App">
     <header className="App-header">
-      <p>Hello world! Let's parse some files!</p>
-      <JsonParser />
-      <XmlParser />
-      <CsvParser />
+      <h2>Product Parser</h2>
+      <ClothesParser />
     </header>
   </div>
 );

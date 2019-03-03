@@ -1,27 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
+import json from "./clothes.json";
 
-import { Table } from "..";
-import { xmlParser } from "../../utils";
-
-const XmlParser = ({ classes }) => {
-  const xml = xmlParser(clothes);
-
-  return (
-    <div className={classes.root}>
-      <h2>Xml Parser</h2>
-      <Table clothes={xml} />
-    </div>
-  );
-};
-
-XmlParser.propTypes = {
-  classes: PropTypes.shape().isRequired
-};
-
-export default XmlParser;
-
-const clothes = `<?xml version="1.0" encoding="UTF-8" ?>
+const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <clothes>
 	<garment>
 		<type>T-shirt</type>
@@ -84,3 +63,18 @@ const clothes = `<?xml version="1.0" encoding="UTF-8" ?>
 	</garment>
 </clothes>	
 `;
+
+const csv = `type,size,brand,color
+T-shirt,L,Tiger,White
+Shirt,M,Riley,Blue
+Sweater,S,H&M,Black
+Hoodie,XL,FILA,Black,
+T-shirt,XS,Calvin Klein,Grey
+Tanktop,L,Vans,White
+Shirt,M,Adidas,Pink
+Sweatpants,L,Gymshark,Grey
+Sweater,M,Ullared,Red
+T-shirt,L,Nike,White
+`;
+
+export { json, xml, csv };
